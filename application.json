@@ -1,0 +1,27 @@
+{
+  "appIsExample": false,
+  "appLayout": {
+    "type": "FLUID"
+  },
+  "applicationVersion": 2,
+  "collapseInvisibleWidgets": true,
+  "color": "#D6D1F2",
+  "evaluationVersion": 2,
+  "pages": [
+    {
+      "id": "userForm",
+      "isDefault": true
+    },
+    {
+      "id": "AdminPanel",
+      "isDefault": false
+    },
+    {
+      "id": "UserPanel",
+      "isDefault": false
+    }
+  ],
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  }
+}

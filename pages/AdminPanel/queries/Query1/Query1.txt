@@ -1,0 +1,13 @@
+<h2>🎫 Ticket Update</h2>
+
+<p>ID: {{TicketsTable.tableData[0].TicketID}}</p>
+
+<p>Hello <b>{{TicketsTable.tableData[0].Name}}</b>,</p>
+
+<p>Your ticket has been updated.</p>
+
+<p><b>Status:</b> {{TicketsTable.tableData[0].Status}}</p>
+<p><b>Priority:</b> {{TicketsTable.tableData[0].Priority}}</p>
+<p><b>Admin Notes:</b> {{TicketsTable.tableData[0].AdminNotes || "No notes added"}}</p>
+
+<p><b>Updated At:</b> {{moment().format("YYYY-MM-DD HH:mm:ss")}}</p>

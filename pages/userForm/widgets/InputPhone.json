@@ -1,0 +1,61 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "allowDialCodeChange": true,
+  "allowFormatting": true,
+  "animateLoading": true,
+  "autoFocus": false,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 36,
+  "boxShadow": "none",
+  "defaultDialCode": "+91",
+  "defaultText": "",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "validation"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicTriggerPathList": [],
+  "iconAlign": "left",
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "uj7e7943g9",
+  "label": "Enter your Phone Number",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelStyle": "",
+  "labelTextColor": "#18181b",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 24,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 35,
+  "mobileLeftColumn": 3,
+  "mobileRightColumn": 23,
+  "mobileTopRow": 28,
+  "needsErrorInfo": false,
+  "parentColumnSpace": 14.234375,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "regex": "",
+  "renderMode": "CANVAS",
+  "resetOnSubmit": true,
+  "responsiveBehavior": "fill",
+  "rightColumn": 42,
+  "topRow": 29,
+  "type": "PHONE_INPUT_WIDGET",
+  "validation": "{{ InputPhone.text.replace(/\\D/g, \"\").length === 10 }}",
+  "version": 1,
+  "widgetId": "mhfn8pe9ue",
+  "widgetName": "InputPhone"
+}

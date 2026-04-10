@@ -1,0 +1,60 @@
+{
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 45,
+  "boxShadow": "none",
+  "defaultOptionValue": "GREEN",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [],
+  "isDisabled": false,
+  "isFilterable": true,
+  "isLoading": false,
+  "isRequired": true,
+  "isVisible": true,
+  "key": "rwjclgfkup",
+  "labelAlignment": "left",
+  "labelPosition": "Top",
+  "labelText": "Select Priority",
+  "labelTextColor": "#18181b",
+  "labelTextSize": "0.875rem",
+  "labelWidth": 5,
+  "leftColumn": 24,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "minWidth": 450,
+  "mobileBottomRow": 43,
+  "mobileLeftColumn": 3,
+  "mobileRightColumn": 23,
+  "mobileTopRow": 36,
+  "needsErrorInfo": false,
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 14.234375,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "placeholderText": "Select option",
+  "renderMode": "CANVAS",
+  "responsiveBehavior": "fill",
+  "rightColumn": 42,
+  "serverSideFiltering": false,
+  "sourceData": "[\n  { \"label\": \"Low\", \"value\": \"Low\" },\n  { \"label\": \"Medium\", \"value\": \"Medium\" },\n  { \"label\": \"High\", \"value\": \"High\" }\n]",
+  "topRow": 38,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "es9xlizmum",
+  "widgetName": "SelectPriority"
+}
