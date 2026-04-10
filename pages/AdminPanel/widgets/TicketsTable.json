@@ -52,7 +52,7 @@
   "customIsLoading": false,
   "customIsLoadingValue": "",
   "defaultPageSize": 0,
-  "defaultSelectedRowIndex": "{{0}}",
+  "defaultSelectedRowIndex": "{{JSObject1.filteredTickets().length ? 0 : -1}}",
   "defaultSelectedRowIndices": [
     0
   ],
@@ -690,7 +690,7 @@
   "rightColumn": 64,
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{(Api1.data || []).filter((ticket) => {\n  const statusFilter = FilterStatus.selectedOptionValue || \"\";\n  const categoryFilter = FilterCategory.selectedOptionValue || \"\";\n  const priorityFilter = FilterPriority.selectedOptionValue || \"\";\n  const searchValue = (SearchTickets.text || \"\").trim().toLowerCase();\n  const matchesStatus = !statusFilter || ticket.Status === statusFilter;\n  const matchesCategory = !categoryFilter || ticket.Category === categoryFilter;\n  const matchesPriority = !priorityFilter || ticket.Priority === priorityFilter;\n  const matchesSearch = !searchValue || [ticket.TicketID, ticket.Email, ticket.Subject].some((value) => ((value || \"\").toString().toLowerCase().includes(searchValue)));\n  return matchesStatus && matchesCategory && matchesPriority && matchesSearch;\n})}}",
+  "tableData": "{{JSObject1.filteredTickets()}}",
   "textSize": "0.875rem",
   "topRow": 33,
   "totalRecordsCount": 0,

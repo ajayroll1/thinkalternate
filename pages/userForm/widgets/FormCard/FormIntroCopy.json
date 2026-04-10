@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 5,
+  "bottomRow": 14,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,43 +11,40 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "1.125rem",
-  "fontStyle": "BOLD",
+  "fontSize": "0.95rem",
+  "fontStyle": "",
   "isLoading": false,
   "isVisible": true,
-  "key": "zv4ydjqhg0",
-  "leftColumn": 22,
+  "key": "ufformcopy1",
+  "leftColumn": 4,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 11,
-  "mobileLeftColumn": 28,
-  "mobileRightColumn": 44,
-  "mobileTopRow": 7,
+  "mobileBottomRow": 14,
+  "mobileLeftColumn": 3,
+  "mobileRightColumn": 60,
+  "mobileTopRow": 9,
   "needsErrorInfo": false,
   "overflow": "NONE",
   "parentColumnSpace": 22.125,
-  "parentId": "90b9u4ngr3",
+  "parentId": "ufformcv1",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 38,
+  "rightColumn": 60,
   "shouldTruncate": false,
-  "text": "In Progress: {{JSObject1.countByStatus(\"In Progress\")}}",
-  "textAlign": "CENTER",
-  "textColor": "#7DD3FC",
-  "topRow": 1,
-  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "text": "Complete the required fields and we will send your ticket ID and updates directly to your inbox.",
+  "textAlign": "LEFT",
+  "textColor": "#64748B",
+  "topRow": 9,
+  "truncateButtonColor": "#64748B",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "4v24q8vtyw",
-  "widgetName": "Text3"
+  "widgetId": "ufformcopy",
+  "widgetName": "FormIntroCopy"
 }

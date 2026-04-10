@@ -5,15 +5,15 @@
     "layouts": [
       {
         "dsl": {
-          "backgroundColor": "#F8FAFC",
-          "bottomRow": 810,
+          "backgroundColor": "#EEF4F8",
+          "bottomRow": 720,
           "canExtend": true,
           "containerStyle": "none",
           "detachFromLayout": true,
           "dynamicBindingPathList": [],
           "dynamicTriggerPathList": [],
           "leftColumn": 0,
-          "minHeight": 1292,
+          "minHeight": 1120,
           "parentColumnSpace": 1,
           "parentRowSpace": 1,
           "rightColumn": 4896,

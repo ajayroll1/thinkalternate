@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 6,
+  "bottomRow": 8,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,43 +11,40 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
   "dynamicTriggerPathList": [],
   "fontFamily": "{{appsmith.theme.fontFamily.appFont}}",
-  "fontSize": "2rem",
+  "fontSize": "0.875rem",
   "fontStyle": "BOLD",
   "isLoading": false,
   "isVisible": true,
-  "key": "d2n0s7h1af",
-  "leftColumn": 8,
+  "key": "ufherobadge1",
+  "leftColumn": 4,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 9,
+  "mobileBottomRow": 8,
   "mobileLeftColumn": 3,
-  "mobileRightColumn": 41,
-  "mobileTopRow": 3,
+  "mobileRightColumn": 36,
+  "mobileTopRow": 4,
   "needsErrorInfo": false,
   "overflow": "NONE",
   "parentColumnSpace": 22.125,
-  "parentId": "0",
+  "parentId": "ufinfocv1",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 56,
+  "rightColumn": 34,
   "shouldTruncate": false,
-  "text": "Submit a support ticket",
+  "text": "CUSTOMER SUPPORT PORTAL",
   "textAlign": "LEFT",
-  "textColor": "#0F172A",
-  "topRow": 2,
-  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "textColor": "#5EEAD4",
+  "topRow": 4,
+  "truncateButtonColor": "#5EEAD4",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "q5mygh8s2r",
-  "widgetName": "HeroTitle"
+  "widgetId": "ufherobadge",
+  "widgetName": "HeroEyebrow"
 }

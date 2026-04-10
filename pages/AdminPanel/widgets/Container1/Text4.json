@@ -41,7 +41,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 59,
   "shouldTruncate": false,
-  "text": "Closed: {{ Api1.data.filter(t => t.Status === \"Closed\").length }}",
+  "text": "Closed: {{JSObject1.countByStatus(\"Closed\")}}",
   "textAlign": "CENTER",
   "textColor": "#86EFAC",
   "topRow": 1,

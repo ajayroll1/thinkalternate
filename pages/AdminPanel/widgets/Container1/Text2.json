@@ -43,7 +43,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 18,
   "shouldTruncate": false,
-  "text": "Open: {{ Api1.data.filter(t => t.Status === \"Open\").length }}",
+  "text": "Open: {{JSObject1.countByStatus(\"Open\")}}",
   "textAlign": "CENTER",
   "textColor": "#FCD34D",
   "topRow": 1,

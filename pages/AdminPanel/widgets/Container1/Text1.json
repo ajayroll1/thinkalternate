@@ -43,7 +43,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 8,
   "shouldTruncate": false,
-  "text": "Total Tickets: {{Api1.data.length}}",
+  "text": "Total Tickets: {{JSObject1.getTickets().length}}",
   "textAlign": "CENTER",
   "textColor": "#F8FAFC",
   "topRow": 1,

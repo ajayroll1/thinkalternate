@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "<h2>Ticket {{TicketsTable.triggeredRow.TicketID}} status changed to {{this.params.status || TicketsTable.triggeredRow.Status}}</h2>\n\n<p>Hello <b>{{TicketsTable.triggeredRow.Name}}</b>,</p>\n\n<p>Your ticket has been updated by the support team.</p>\n\n<p><b>Ticket ID:</b> {{TicketsTable.triggeredRow.TicketID}}</p>\n<p><b>Status:</b> {{this.params.status || TicketsTable.triggeredRow.Status}}</p>\n<p><b>Priority:</b> {{TicketsTable.triggeredRow.Priority || \"Not provided\"}}</p>\n<p><b>Admin Notes:</b> {{TicketsTable.triggeredRow.AdminNotes || \"No notes added\"}}</p>\n\n<p><b>Updated At:</b> {{moment().format(\"YYYY-MM-DD HH:mm:ss\")}}</p>\n",
+      "body": "<h2>Ticket {{this.params.ticketId || TicketsTable.triggeredRow.TicketID}} status changed to {{this.params.status || TicketsTable.triggeredRow.Status}}</h2>\n\n<p>Hello <b>{{this.params.name || TicketsTable.triggeredRow.Name}}</b>,</p>\n\n<p>Your ticket has been updated by the support team.</p>\n\n<p><b>Ticket ID:</b> {{this.params.ticketId || TicketsTable.triggeredRow.TicketID}}</p>\n<p><b>Status:</b> {{this.params.status || TicketsTable.triggeredRow.Status}}</p>\n<p><b>Priority:</b> {{this.params.priority || TicketsTable.triggeredRow.Priority || \"Not provided\"}}</p>\n<p><b>Admin Notes:</b> {{this.params.adminNotes || TicketsTable.triggeredRow.AdminNotes || \"No notes added\"}}</p>\n<p><b>Updated At:</b> {{this.params.updatedAt || moment().format(\"YYYY-MM-DD HH:mm:ss\")}}</p>",
       "encodeParamsToggle": true,
       "formData": {
         "command": "SEND",
@@ -14,8 +14,8 @@
           "bodyType": "text/html",
           "cc": "",
           "from": "ajaymahto2580@gmail.com",
-          "subject": "Ticket {{TicketsTable.triggeredRow.TicketID}} status changed to {{this.params.status || TicketsTable.triggeredRow.Status}}",
-          "to": "{{TicketsTable.triggeredRow.Email}}"
+          "subject": "Ticket {{this.params.ticketId || TicketsTable.triggeredRow.TicketID}} status changed to {{this.params.status || TicketsTable.triggeredRow.Status}}",
+          "to": "{{this.params.email || TicketsTable.triggeredRow.Email}}"
         }
       },
       "paginationType": "NONE",

@@ -1,19 +1,12 @@
 {
   "animateLoading": true,
-  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 71,
+  "borderRadius": "0.875rem",
+  "bottomRow": 81,
   "boxShadow": "none",
-  "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "buttonColor": "#0F172A",
   "buttonVariant": "PRIMARY",
   "disabledWhenInvalid": true,
-  "dynamicBindingPathList": [
-    {
-      "key": "buttonColor"
-    },
-    {
-      "key": "borderRadius"
-    }
-  ],
+  "dynamicBindingPathList": [],
   "dynamicPropertyPathList": [],
   "dynamicTriggerPathList": [
     {
@@ -25,25 +18,25 @@
   "isLoading": false,
   "isVisible": true,
   "key": "2wwyi2qswk",
-  "leftColumn": 8,
+  "leftColumn": 4,
   "minWidth": 120,
-  "mobileBottomRow": 99,
+  "mobileBottomRow": 93,
   "mobileLeftColumn": 3,
-  "mobileRightColumn": 44,
-  "mobileTopRow": 93,
+  "mobileRightColumn": 60,
+  "mobileTopRow": 84,
   "needsErrorInfo": false,
   "onClick": "{{JSObject2.submitTicket();}}",
   "parentColumnSpace": 14.234375,
-  "parentId": "0",
+  "parentId": "ufformcv1",
   "parentRowSpace": 10,
   "placement": "LEFT",
   "recaptchaType": "V3",
   "renderMode": "CANVAS",
   "resetFormOnClick": false,
   "responsiveBehavior": "fill",
-  "rightColumn": 56,
-  "text": "Create Ticket",
-  "topRow": 64,
+  "rightColumn": 60,
+  "text": "Submit Ticket",
+  "topRow": 73,
   "type": "BUTTON_WIDGET",
   "version": 1,
   "widgetId": "kdoof85ke0",

@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 12,
+  "bottomRow": 62,
   "dynamicBindingPathList": [
     {
       "key": "truncateButtonColor"
@@ -11,9 +11,6 @@
     },
     {
       "key": "borderRadius"
-    },
-    {
-      "key": "text"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -23,31 +20,31 @@
   "fontStyle": "",
   "isLoading": false,
   "isVisible": true,
-  "key": "yz2mc5ht1d",
-  "leftColumn": 8,
+  "key": "ufherohelp1",
+  "leftColumn": 4,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
-  "mobileBottomRow": 17,
+  "mobileBottomRow": 30,
   "mobileLeftColumn": 3,
-  "mobileRightColumn": 41,
-  "mobileTopRow": 10,
+  "mobileRightColumn": 58,
+  "mobileTopRow": 24,
   "needsErrorInfo": false,
   "overflow": "NONE",
   "parentColumnSpace": 22.125,
-  "parentId": "0",
+  "parentId": "ufinfocv1",
   "parentRowSpace": 10,
   "renderMode": "CANVAS",
   "responsiveBehavior": "fill",
-  "rightColumn": 56,
+  "rightColumn": 58,
   "shouldTruncate": false,
-  "text": "Share the issue once, add the right priority, and let the admin panel handle the follow-up cleanly.",
+  "text": "Ticketed tracking for every request\nEmail confirmation as soon as you submit\nPriority-based routing for faster follow-up",
   "textAlign": "LEFT",
-  "textColor": "#475569",
-  "topRow": 7,
-  "truncateButtonColor": "{{appsmith.theme.colors.primaryColor}}",
+  "textColor": "#CBD5E1",
+  "topRow": 46,
+  "truncateButtonColor": "#CBD5E1",
   "type": "TEXT_WIDGET",
   "version": 1,
-  "widgetId": "r4t8qk9n6p",
-  "widgetName": "HeroSubtitle"
+  "widgetId": "ufherohelp",
+  "widgetName": "HeroBenefits"
 }
