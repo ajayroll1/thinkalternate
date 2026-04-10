@@ -29,7 +29,7 @@
           "data": ""
         },
         "rowObjects": {
-          "data": "{{\n{\n  TicketID: \"TICKET-\" + moment().format(\"YYYYMMDDHHmmss\"),\n  Name: InputName.text,\n  Email: InputEmail.text,\n  Phone: InputPhone.text,\n  Category: SelectCategory.selectedOptionValue,\n  Subject: SubjectInput.text,\n  Description: InputDescription.text,\n  Priority: SelectPriority.selectedOptionValue,\n  Status: \"Open\",\n  AdminNotes: \"\",\n  CreatedAt: moment().format(\"YYYY-MM-DD HH:mm:ss\"),\n  UpdatedAt: moment().format(\"YYYY-MM-DD HH:mm:ss\")\n}\n}}"
+          "data": "{{\n{\n  TicketID: this.params.ticketId || \"TKT-0001\",\n  Name: InputName.text.trim(),\n  Email: InputEmail.text.trim(),\n  Phone: InputPhone.text.replace(/\\D/g, \"\"),\n  Category: SelectCategory.selectedOptionValue,\n  Subject: SubjectInput.text.trim(),\n  Description: InputDescription.text.trim(),\n  Priority: SelectPriority.selectedOptionValue,\n  Status: \"Open\",\n  AdminNotes: \"\",\n  CreatedAt: moment().format(\"YYYY-MM-DD HH:mm:ss\"),\n  UpdatedAt: moment().format(\"YYYY-MM-DD HH:mm:ss\")\n}\n}}"
         },
         "sheetName": {
           "data": "tickets"

@@ -1,13 +1,12 @@
-<h2>🎫 Ticket Update</h2>
+<h2>Ticket {{TicketsTable.triggeredRow.TicketID}} status changed to {{this.params.status || TicketsTable.triggeredRow.Status}}</h2>
 
-<p>ID: {{TicketsTable.tableData[0].TicketID}}</p>
+<p>Hello <b>{{TicketsTable.triggeredRow.Name}}</b>,</p>
 
-<p>Hello <b>{{TicketsTable.tableData[0].Name}}</b>,</p>
+<p>Your ticket has been updated by the support team.</p>
 
-<p>Your ticket has been updated.</p>
-
-<p><b>Status:</b> {{TicketsTable.tableData[0].Status}}</p>
-<p><b>Priority:</b> {{TicketsTable.tableData[0].Priority}}</p>
-<p><b>Admin Notes:</b> {{TicketsTable.tableData[0].AdminNotes || "No notes added"}}</p>
+<p><b>Ticket ID:</b> {{TicketsTable.triggeredRow.TicketID}}</p>
+<p><b>Status:</b> {{this.params.status || TicketsTable.triggeredRow.Status}}</p>
+<p><b>Priority:</b> {{TicketsTable.triggeredRow.Priority || "Not provided"}}</p>
+<p><b>Admin Notes:</b> {{TicketsTable.triggeredRow.AdminNotes || "No notes added"}}</p>
 
 <p><b>Updated At:</b> {{moment().format("YYYY-MM-DD HH:mm:ss")}}</p>

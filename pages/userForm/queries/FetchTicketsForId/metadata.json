@@ -1,6 +1,6 @@
 {
-  "gitSyncId": "69d67d6d77f581793f8aabee_40ed8ddd-e514-4baa-8855-d5c23c543129",
-  "id": "AdminPanel_Api2",
+  "gitSyncId": "69d67d6d77f581793f8aabee_0aa95d8c-7f4b-4efe-90b5-e1e3f4f6b001",
+  "id": "userForm_FetchTicketsForId",
   "pluginId": "google-sheets-plugin",
   "pluginType": "SAAS",
   "unpublishedAction": {
@@ -8,14 +8,14 @@
       "encodeParamsToggle": true,
       "formData": {
         "command": {
-          "data": "UPDATE_ONE"
+          "data": "FETCH_MANY"
         },
         "entityType": {
           "data": "ROWS"
         },
         "pagination": {
           "data": {
-            "limit": "20",
+            "limit": "500",
             "offset": "0"
           }
         },
@@ -27,9 +27,6 @@
         },
         "range": {
           "data": ""
-        },
-        "rowObjects": {
-          "data": "{{\n{\n  rowIndex: typeof (TicketsTable.updatedRow || {}).rowIndex !== \"undefined\" ? (TicketsTable.updatedRow || {}).rowIndex : TicketsTable.triggeredRow.rowIndex,\n  Status: this.params.status || ((TicketsTable.updatedRow || {}).Status || TicketsTable.triggeredRow.Status),\n  AdminNotes: typeof (TicketsTable.updatedRow || {}).AdminNotes !== \"undefined\" ? (((TicketsTable.updatedRow || {}).AdminNotes || \"\").toString().trim()) : (((TicketsTable.triggeredRow || {}).AdminNotes || \"\").toString().trim()),\n  UpdatedAt: moment().format(\"YYYY-MM-DD HH:mm:ss\")\n}\n}}"
         },
         "sheetName": {
           "data": "tickets"
@@ -72,16 +69,9 @@
       "name": "GoogleSheetsDB",
       "pluginId": "google-sheets-plugin"
     },
-    "dynamicBindingPathList": [
-      {
-        "key": "formData.tableHeaderIndex.data"
-      },
-      {
-        "key": "formData.rowObjects.data"
-      }
-    ],
-    "name": "Api2",
-    "pageId": "AdminPanel",
+    "dynamicBindingPathList": [],
+    "name": "FetchTicketsForId",
+    "pageId": "userForm",
     "runBehaviour": "MANUAL",
     "userSetOnLoad": false
   }
