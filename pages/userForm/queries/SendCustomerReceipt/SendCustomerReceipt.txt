@@ -1,0 +1,11 @@
+<h2>We received your ticket {{this.params.ticketId}}</h2>
+
+<p>Hello <b>{{this.params.name || InputName.text.trim()}}</b>,</p>
+
+<p>Thanks for contacting support. We have received your request and created a ticket for it.</p>
+
+<p><b>Ticket ID:</b> {{this.params.ticketId}}</p>
+<p><b>Subject:</b> {{this.params.subject || SubjectInput.text.trim()}}</p>
+<p><b>Status:</b> Open</p>
+
+<p>Our team will review your ticket and get back to you soon.</p>
