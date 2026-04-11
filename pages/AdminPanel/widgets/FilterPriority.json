@@ -2,13 +2,10 @@
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 29,
+  "bottomRow": 33,
   "boxShadow": "none",
   "defaultOptionValue": "",
   "dynamicBindingPathList": [
-    {
-      "key": "accentColor"
-    },
     {
       "key": "borderRadius"
     }
@@ -43,6 +40,8 @@
   "needsErrorInfo": false,
   "optionLabel": "label",
   "optionValue": "value",
+  "originalBottomRow": 29,
+  "originalTopRow": 22,
   "parentColumnSpace": 22.125,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -52,7 +51,7 @@
   "rightColumn": 64,
   "serverSideFiltering": false,
   "sourceData": "[\n  { \"label\": \"All Priorities\", \"value\": \"\" },\n  { \"label\": \"Low\", \"value\": \"Low\" },\n  { \"label\": \"Medium\", \"value\": \"Medium\" },\n  { \"label\": \"High\", \"value\": \"High\" }\n]",
-  "topRow": 22,
+  "topRow": 26,
   "type": "SELECT_WIDGET",
   "version": 1,
   "widgetId": "f1lt3rprio",

@@ -4,7 +4,7 @@
   "borderColor": "#D7E0E7",
   "borderRadius": "1rem",
   "borderWidth": "1",
-  "bottomRow": 74,
+  "bottomRow": 78,
   "boxShadow": "{{appsmith.theme.boxShadow.appBoxShadow}}",
   "cachedTableData": {},
   "canFreezeColumn": true,
@@ -59,55 +59,16 @@
   "delimiter": ",",
   "dynamicBindingPathList": [
     {
-      "key": "accentColor"
-    },
-    {
-      "key": "borderRadius"
-    },
-    {
-      "key": "boxShadow"
-    },
-    {
       "key": "tableData"
     },
     {
-      "key": "primaryColumns.TicketID.computedValue"
+      "key": "primaryColumns.Status.menuButtonLabel"
     },
     {
-      "key": "primaryColumns.Name.computedValue"
+      "key": "primaryColumns.Status.menuColor"
     },
     {
-      "key": "primaryColumns.Email.computedValue"
-    },
-    {
-      "key": "primaryColumns.Phone.computedValue"
-    },
-    {
-      "key": "primaryColumns.Category.computedValue"
-    },
-    {
-      "key": "primaryColumns.Subject.computedValue"
-    },
-    {
-      "key": "primaryColumns.Description.computedValue"
-    },
-    {
-      "key": "primaryColumns.Priority.computedValue"
-    },
-    {
-      "key": "primaryColumns.Status.computedValue"
-    },
-    {
-      "key": "primaryColumns.AdminNotes.computedValue"
-    },
-    {
-      "key": "primaryColumns.CreatedAt.computedValue"
-    },
-    {
-      "key": "primaryColumns.UpdatedAt.computedValue"
-    },
-    {
-      "key": "primaryColumns.rowIndex.computedValue"
+      "key": "primaryColumns.Status.cellBackground"
     },
     {
       "key": "primaryColumns.Status.borderRadius"
@@ -116,16 +77,49 @@
       "key": "primaryColumns.Status.boxShadow"
     },
     {
-      "key": "primaryColumns.Status.menuButtonLabel"
+      "key": "primaryColumns.Category.computedValue"
     },
     {
-      "key": "primaryColumns.Status.cellBackground"
+      "key": "primaryColumns.Description.computedValue"
     },
     {
-      "key": "primaryColumns.Status.menuColor"
+      "key": "primaryColumns.Email.computedValue"
+    },
+    {
+      "key": "primaryColumns.Priority.computedValue"
+    },
+    {
+      "key": "primaryColumns.CreatedAt.computedValue"
+    },
+    {
+      "key": "primaryColumns.UpdatedAt.computedValue"
+    },
+    {
+      "key": "primaryColumns.Subject.computedValue"
+    },
+    {
+      "key": "primaryColumns.Name.computedValue"
+    },
+    {
+      "key": "primaryColumns.AdminNotes.computedValue"
+    },
+    {
+      "key": "primaryColumns.TicketID.computedValue"
+    },
+    {
+      "key": "primaryColumns.Phone.computedValue"
+    },
+    {
+      "key": "primaryColumns.rowIndex.computedValue"
     },
     {
       "key": "defaultSelectedRowIndex"
+    },
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "boxShadow"
     }
   ],
   "dynamicPropertyPathList": [
@@ -176,8 +170,8 @@
   "mobileTopRow": 62,
   "multiRowSelection": false,
   "needsErrorInfo": false,
-  "originalBottomRow": 92,
-  "originalTopRow": 24,
+  "originalBottomRow": 74,
+  "originalTopRow": 33,
   "parentColumnSpace": 22.125,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -502,7 +496,7 @@
           "isDisabled": false,
           "isVisible": true,
           "label": " In Progress ",
-          "onClick": "{{JSObject1.updateStatus(\"In Progress\")}}",
+          "onClick": "{{JSObject2.updateStatus('In Progress');}}",
           "widgetId": "sdlluxpodi"
         },
         "menuItem601d2zn1i6": {
@@ -513,18 +507,9 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "Open",
-          "onClick": "{{JSObject1.updateStatus(\"Open\")}}",
+          "onClick": "{{JSObject2.updateStatus('Open');}}",
           "textColor": "#71717a",
           "widgetId": "fk9x2icijz"
-        },
-        "menuItemresolved7a1": {
-          "id": "menuItemresolved7a1",
-          "index": 2,
-          "isDisabled": false,
-          "isVisible": true,
-          "label": "Resolved",
-          "onClick": "{{JSObject1.updateStatus(\"Resolved\")}}",
-          "widgetId": "r3solv3d7a"
         },
         "menuItemkcq0vdtq9i": {
           "id": "menuItemkcq0vdtq9i",
@@ -532,8 +517,17 @@
           "isDisabled": false,
           "isVisible": true,
           "label": "Closed",
-          "onClick": "{{JSObject1.updateStatus(\"Closed\")}}",
+          "onClick": "{{JSObject2.updateStatus('Closed');}}",
           "widgetId": "ts2cfayxzx"
+        },
+        "menuItemresolved7a1": {
+          "id": "menuItemresolved7a1",
+          "index": 2,
+          "isDisabled": false,
+          "isVisible": true,
+          "label": "Resolved",
+          "onClick": "{{JSObject2.updateStatus('Resolved');}}",
+          "widgetId": "r3solv3d7a"
         }
       },
       "menuItemsSource": "STATIC",
@@ -690,9 +684,9 @@
   "rightColumn": 64,
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{JSObject1.filteredTickets()}}",
+  "tableData": "{{ Api1.data }}",
   "textSize": "0.875rem",
-  "topRow": 33,
+  "topRow": 37,
   "totalRecordsCount": 0,
   "type": "TABLE_WIDGET_V2",
   "version": 2,
