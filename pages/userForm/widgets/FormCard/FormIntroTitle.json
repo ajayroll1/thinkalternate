@@ -1,16 +1,10 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 8,
+  "bottomRow": 11,
   "dynamicBindingPathList": [
     {
-      "key": "truncateButtonColor"
-    },
-    {
       "key": "fontFamily"
-    },
-    {
-      "key": "borderRadius"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -30,6 +24,8 @@
   "mobileRightColumn": 60,
   "mobileTopRow": 4,
   "needsErrorInfo": false,
+  "originalBottomRow": 14,
+  "originalTopRow": 4,
   "overflow": "NONE",
   "parentColumnSpace": 22.125,
   "parentId": "ufformcv1",

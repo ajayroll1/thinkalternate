@@ -1,16 +1,10 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 14,
+  "bottomRow": 19,
   "dynamicBindingPathList": [
     {
-      "key": "truncateButtonColor"
-    },
-    {
       "key": "fontFamily"
-    },
-    {
-      "key": "borderRadius"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
@@ -30,6 +24,8 @@
   "mobileRightColumn": 60,
   "mobileTopRow": 9,
   "needsErrorInfo": false,
+  "originalBottomRow": 21,
+  "originalTopRow": 12,
   "overflow": "NONE",
   "parentColumnSpace": 22.125,
   "parentId": "ufformcv1",
@@ -41,7 +37,7 @@
   "text": "Complete the required fields and we will send your ticket ID and updates directly to your inbox.",
   "textAlign": "LEFT",
   "textColor": "#64748B",
-  "topRow": 9,
+  "topRow": 12,
   "truncateButtonColor": "#64748B",
   "type": "TEXT_WIDGET",
   "version": 1,
