@@ -9,3 +9,4 @@
 <p><b>Status:</b> Open</p>
 
 <p>Our team will review your ticket and get back to you soon.</p>
+<p>This confirmation has been sent to {{this.params.email}}.</p>

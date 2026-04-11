@@ -56,51 +56,146 @@ export default {
     return this.getTickets().filter((ticket) => (ticket.Status || "") === status).length;
   },
 
-  async saveNotes() {
-    try {
-      await Api2.run();
-      await Api1.run();
-      showAlert("Admin notes saved.", "success");
-    } catch (error) {
-      showAlert("Failed to save admin notes.", "error");
-      throw error;
-    }
+  getTicketContext(overrides = {}) {
+    const updatedRow = TicketsTable.updatedRow || {};
+    const triggeredRow = TicketsTable.triggeredRow || {};
+    const selectedRow = TicketsTable.selectedRow || {};
+    const pickFirst = (...values) =>
+      values.find((value) => value !== undefined && value !== null && value !== "");
+
+    const rowIndex = pickFirst(
+      overrides.rowIndex,
+      updatedRow.rowIndex,
+      triggeredRow.rowIndex,
+      selectedRow.rowIndex
+    );
+
+    return {
+      rowIndex,
+      ticketId:
+        pickFirst(
+          overrides.ticketId,
+          updatedRow.TicketID,
+          triggeredRow.TicketID,
+          selectedRow.TicketID
+        ) || "",
+      name:
+        pickFirst(overrides.name, updatedRow.Name, triggeredRow.Name, selectedRow.Name) ||
+        "Customer",
+      email:
+        (
+          pickFirst(
+            overrides.email,
+            updatedRow.Email,
+            triggeredRow.Email,
+            selectedRow.Email
+          ) || ""
+        )
+          .toString()
+          .trim(),
+      subject:
+        pickFirst(
+          overrides.subject,
+          updatedRow.Subject,
+          triggeredRow.Subject,
+          selectedRow.Subject
+        ) || "",
+      priority:
+        pickFirst(
+          overrides.priority,
+          updatedRow.Priority,
+          triggeredRow.Priority,
+          selectedRow.Priority
+        ) || "",
+      status:
+        pickFirst(
+          overrides.status,
+          updatedRow.Status,
+          triggeredRow.Status,
+          selectedRow.Status
+        ) || "Open",
+      adminNotes:
+        (
+          typeof overrides.adminNotes !== "undefined"
+            ? overrides.adminNotes
+            : typeof updatedRow.AdminNotes !== "undefined"
+              ? updatedRow.AdminNotes
+              : pickFirst(triggeredRow.AdminNotes, selectedRow.AdminNotes) || ""
+        )
+          .toString()
+          .trim(),
+      updatedAt: overrides.updatedAt || moment().format("YYYY-MM-DD HH:mm:ss")
+    };
   },
 
-  async updateStatus(status) {
+  async syncTicketUpdate({
+    status,
+    adminNotes,
+    successMessage,
+    failureMessage
+  } = {}) {
     try {
-      const selectedTicket = TicketsTable.triggeredRow || {};
+      const ticket = this.getTicketContext({ status, adminNotes });
 
-      await Api2.run({ status });
+      if (ticket.rowIndex === undefined || ticket.rowIndex === null || ticket.rowIndex === "") {
+        throw new Error("No ticket row found to update.");
+      }
+
+      await Api2.run({
+        rowIndex: ticket.rowIndex,
+        status: ticket.status,
+        adminNotes: ticket.adminNotes,
+        updatedAt: ticket.updatedAt
+      });
+
       let emailIssue = false;
 
-      try {
-        await Query1.run({
-          status,
-          ticketId: selectedTicket.TicketID || "",
-          email: selectedTicket.Email || "",
-          name: selectedTicket.Name || "",
-          priority: selectedTicket.Priority || "",
-          adminNotes:
-            typeof (TicketsTable.updatedRow || {}).AdminNotes !== "undefined"
-              ? (TicketsTable.updatedRow || {}).AdminNotes
-              : selectedTicket.AdminNotes || "",
-          updatedAt: moment().format("YYYY-MM-DD HH:mm:ss")
-        });
-      } catch (emailError) {
+      if (ticket.email) {
+        try {
+          await Query1.run({
+            ticketId: ticket.ticketId,
+            email: ticket.email,
+            name: ticket.name,
+            subject: ticket.subject,
+            priority: ticket.priority,
+            status: ticket.status,
+            adminNotes: ticket.adminNotes,
+            updatedAt: ticket.updatedAt
+          });
+        } catch (emailError) {
+          emailIssue = true;
+        }
+      } else {
         emailIssue = true;
       }
 
       await Api1.run();
       showAlert(
         emailIssue
-          ? `Ticket status updated to ${status}, but email could not be sent.`
-          : `Ticket status updated to ${status}.`,
+          ? `${successMessage} Sheet updated, but user email could not be sent.`
+          : successMessage,
         emailIssue ? "warning" : "success"
       );
+
+      return ticket;
     } catch (error) {
-      showAlert("Failed to update ticket status.", "error");
+      showAlert(failureMessage || "Failed to update ticket.", "error");
       throw error;
     }
+  },
+
+  async saveNotes() {
+    return this.syncTicketUpdate({
+      successMessage: "Admin notes saved successfully.",
+      failureMessage: "Failed to save admin notes."
+    });
+  },
+
+  async updateStatus(status) {
+    return this.syncTicketUpdate({
+      status,
+      successMessage: `Ticket status updated to ${status}.`,
+      failureMessage: "Failed to update ticket status."
+    });
   }
 }

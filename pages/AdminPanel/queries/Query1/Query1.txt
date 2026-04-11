@@ -1,12 +1,14 @@
-<h2>Ticket {{this.params.ticketId || TicketsTable.triggeredRow.TicketID}} status changed to {{this.params.status || TicketsTable.triggeredRow.Status}}</h2>
+<h2>Ticket {{this.params.ticketId || TicketsTable.updatedRow.TicketID || TicketsTable.triggeredRow.TicketID || TicketsTable.selectedRow.TicketID}} status changed to {{this.params.status || TicketsTable.updatedRow.Status || TicketsTable.triggeredRow.Status || TicketsTable.selectedRow.Status}}</h2>
 
-<p>Hello <b>{{this.params.name || TicketsTable.triggeredRow.Name}}</b>,</p>
+<p>Hello <b>{{this.params.name || TicketsTable.updatedRow.Name || TicketsTable.triggeredRow.Name || TicketsTable.selectedRow.Name}}</b>,</p>
 
 <p>Your ticket has been updated by the support team.</p>
 
-<p><b>Ticket ID:</b> {{this.params.ticketId || TicketsTable.triggeredRow.TicketID}}</p>
-<p><b>Status:</b> {{this.params.status || TicketsTable.triggeredRow.Status}}</p>
-<p><b>Priority:</b> {{this.params.priority || TicketsTable.triggeredRow.Priority || "Not provided"}}</p>
-<p><b>Admin Notes:</b> {{this.params.adminNotes || TicketsTable.triggeredRow.AdminNotes || "No notes added"}}</p>
+<p><b>Ticket ID:</b> {{this.params.ticketId || TicketsTable.updatedRow.TicketID || TicketsTable.triggeredRow.TicketID || TicketsTable.selectedRow.TicketID}}</p>
+<p><b>Subject:</b> {{this.params.subject || TicketsTable.updatedRow.Subject || TicketsTable.triggeredRow.Subject || TicketsTable.selectedRow.Subject || "Not provided"}}</p>
+<p><b>Status:</b> {{this.params.status || TicketsTable.updatedRow.Status || TicketsTable.triggeredRow.Status || TicketsTable.selectedRow.Status}}</p>
+<p><b>Priority:</b> {{this.params.priority || TicketsTable.updatedRow.Priority || TicketsTable.triggeredRow.Priority || TicketsTable.selectedRow.Priority || "Not provided"}}</p>
+<p><b>Admin Notes:</b> {{this.params.adminNotes || TicketsTable.updatedRow.AdminNotes || TicketsTable.triggeredRow.AdminNotes || TicketsTable.selectedRow.AdminNotes || "No notes added"}}</p>
 
 <p><b>Updated At:</b> {{this.params.updatedAt || moment().format("YYYY-MM-DD HH:mm:ss")}}</p>
+<p>If you need to share more details, reply with your ticket ID.</p>

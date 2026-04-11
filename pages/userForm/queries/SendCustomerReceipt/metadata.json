@@ -5,7 +5,7 @@
   "pluginType": "DB",
   "unpublishedAction": {
     "actionConfiguration": {
-      "body": "<h2>We received your ticket {{this.params.ticketId}}</h2>\n\n<p>Hello <b>{{this.params.name || InputName.text.trim()}}</b>,</p>\n\n<p>Thanks for contacting support. We have received your request and created a ticket for it.</p>\n\n<p><b>Ticket ID:</b> {{this.params.ticketId}}</p>\n<p><b>Subject:</b> {{this.params.subject || SubjectInput.text.trim()}}</p>\n<p><b>Status:</b> Open</p>\n\n<p>Our team will review your ticket and get back to you soon.</p>",
+      "body": "<h2>We received your ticket {{this.params.ticketId}}</h2>\n\n<p>Hello <b>{{this.params.name || InputName.text.trim()}}</b>,</p>\n\n<p>Thanks for contacting support. We have received your request and created a ticket for it.</p>\n\n<p><b>Ticket ID:</b> {{this.params.ticketId}}</p>\n<p><b>Subject:</b> {{this.params.subject || SubjectInput.text.trim()}}</p>\n<p><b>Status:</b> Open</p>\n\n<p>Our team will review your ticket and get back to you soon.</p>\n<p>This confirmation has been sent to {{this.params.email}}.</p>",
       "encodeParamsToggle": true,
       "formData": {
         "command": "SEND",
@@ -15,7 +15,7 @@
           "cc": "",
           "from": "ajaymahto2580@gmail.com",
           "subject": "We received your ticket {{this.params.ticketId}}",
-          "to": "{{this.params.email || InputEmail.text.trim()}}"
+          "to": "{{(this.params.email || InputEmail.text.trim()).toString().trim()}}"
         }
       },
       "paginationType": "NONE",
