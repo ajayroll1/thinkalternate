@@ -1,29 +1,64 @@
 export default {
   getTickets() {
     const rawTickets = Api1.data;
+    const normalizeRows = (rows) =>
+      (rows || []).filter((ticket) => {
+        if (!ticket || typeof ticket !== "object") {
+          return false;
+        }
+
+        return Object.values(ticket).some(
+          (value) => value !== undefined && value !== null && value !== ""
+        );
+      });
 
     if (Array.isArray(rawTickets)) {
-      return rawTickets;
+      return normalizeRows(rawTickets);
     }
 
     if (Array.isArray((rawTickets || {}).data)) {
-      return rawTickets.data;
+      return normalizeRows(rawTickets.data);
     }
 
     if (Array.isArray((rawTickets || {}).rows)) {
-      return rawTickets.rows;
+      return normalizeRows(rawTickets.rows);
     }
 
-    if (rawTickets && typeof rawTickets === "object") {
-      const nestedArrays = Object.values(rawTickets).filter(Array.isArray);
+    if (Array.isArray((rawTickets || {}).records)) {
+      return normalizeRows(rawTickets.records);
+    }
 
-      if (nestedArrays.length === 1) {
-        return nestedArrays[0];
-      }
+    if (Array.isArray((rawTickets || {}).body)) {
+      return normalizeRows(rawTickets.body);
+    }
 
-      if (nestedArrays.length > 1) {
-        return nestedArrays.flat();
+    if (typeof rawTickets === "string") {
+      try {
+        const parsedTickets = JSON.parse(rawTickets);
+        return Array.isArray(parsedTickets)
+          ? normalizeRows(parsedTickets)
+          : this.getTicketsFromObject(parsedTickets, normalizeRows);
+      } catch (error) {
+        return [];
       }
+    }
+
+    return this.getTicketsFromObject(rawTickets, normalizeRows);
+  },
+
+  getTicketsFromObject(rawTickets, normalizeRows) {
+    if (!rawTickets || typeof rawTickets !== "object") {
+      return [];
+    }
+
+    const nestedArrays = Object.values(rawTickets).filter(Array.isArray);
+
+    if (nestedArrays.length === 1) {
+      return normalizeRows(nestedArrays[0]);
+    }
+
+    if (nestedArrays.length > 1) {
+      return normalizeRows(nestedArrays.flat());
     }
 
     return [];

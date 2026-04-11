@@ -37,23 +37,12 @@
         "smartSubstitution": {
           "data": true
         },
-        "sortBy": {
-          "data": [
-            {
-              "column": "",
-              "order": "Ascending"
-            }
-          ]
-        },
         "tableHeaderIndex": {
           "data": "1"
         },
         "where": {
           "data": {
             "children": [
-              {
-                "condition": "LT"
-              },
               {
                 "condition": "EQ",
                 "key": "Email",
@@ -76,7 +65,7 @@
     },
     "dynamicBindingPathList": [
       {
-        "key": "formData.where.data.children[1].value"
+        "key": "formData.where.data.children[0].value"
       }
     ],
     "name": "Api3",
