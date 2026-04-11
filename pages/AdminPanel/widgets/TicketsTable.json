@@ -141,9 +141,6 @@
       "key": "primaryColumns.Status.menuItems.menuItem601d2zn1i6.onClick"
     },
     {
-      "key": "primaryColumns.Status.menuItems.menuItemresolved7a1.onClick"
-    },
-    {
       "key": "primaryColumns.AdminNotes.onSubmit"
     }
   ],
@@ -513,21 +510,12 @@
         },
         "menuItemkcq0vdtq9i": {
           "id": "menuItemkcq0vdtq9i",
-          "index": 3,
+          "index": 2,
           "isDisabled": false,
           "isVisible": true,
           "label": "Closed",
           "onClick": "{{JSObject2.updateStatus('Closed');}}",
           "widgetId": "ts2cfayxzx"
-        },
-        "menuItemresolved7a1": {
-          "id": "menuItemresolved7a1",
-          "index": 2,
-          "isDisabled": false,
-          "isVisible": true,
-          "label": "Resolved",
-          "onClick": "{{JSObject2.updateStatus('Resolved');}}",
-          "widgetId": "r3solv3d7a"
         }
       },
       "menuItemsSource": "STATIC",
