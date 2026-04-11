@@ -59,9 +59,6 @@
   "delimiter": ",",
   "dynamicBindingPathList": [
     {
-      "key": "tableData"
-    },
-    {
       "key": "primaryColumns.Status.menuButtonLabel"
     },
     {
@@ -120,6 +117,9 @@
     },
     {
       "key": "boxShadow"
+    },
+    {
+      "key": "tableData"
     }
   ],
   "dynamicPropertyPathList": [
@@ -170,8 +170,8 @@
   "mobileTopRow": 62,
   "multiRowSelection": false,
   "needsErrorInfo": false,
-  "originalBottomRow": 74,
-  "originalTopRow": 33,
+  "originalBottomRow": 78,
+  "originalTopRow": 37,
   "parentColumnSpace": 22.125,
   "parentId": "0",
   "parentRowSpace": 10,
@@ -684,7 +684,7 @@
   "rightColumn": 64,
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{ Api1.data }}",
+  "tableData": "{{\nApi1.data.filter(item =>\n  !SearchTickets.text ||\n  item.Name?.toLowerCase().includes(SearchTickets.text.toLowerCase()) ||\n  item.Email?.toLowerCase().includes(SearchTickets.text.toLowerCase()) ||\n  item.Subject?.toLowerCase().includes(SearchTickets.text.toLowerCase())\n)\n}}",
   "textSize": "0.875rem",
   "topRow": 37,
   "totalRecordsCount": 0,

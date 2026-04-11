@@ -27,6 +27,8 @@
   "mobileRightColumn": 58,
   "mobileTopRow": 30,
   "needsErrorInfo": false,
+  "originalBottomRow": 30,
+  "originalTopRow": 26,
   "overflow": "NONE",
   "parentColumnSpace": 22.125,
   "parentId": "tdpanelcv11",
