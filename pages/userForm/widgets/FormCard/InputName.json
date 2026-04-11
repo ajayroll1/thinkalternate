@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": true,
   "borderRadius": "0.875rem",
-  "bottomRow": 34,
+  "bottomRow": 28,
   "boxShadow": "none",
   "defaultText": "",
   "dynamicBindingPathList": [
@@ -47,7 +47,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 30,
   "showStepArrows": false,
-  "topRow": 25,
+  "topRow": 19,
   "type": "INPUT_WIDGET_V2",
   "validation": "{{InputName.text.trim().length >= 3}}",
   "version": 2,

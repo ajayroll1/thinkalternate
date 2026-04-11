@@ -1,7 +1,7 @@
 {
   "animateLoading": true,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-  "bottomRow": 19,
+  "bottomRow": 13,
   "dynamicBindingPathList": [
     {
       "key": "fontFamily"
@@ -37,7 +37,7 @@
   "text": "Complete the required fields and we will send your ticket ID and updates directly to your inbox.",
   "textAlign": "LEFT",
   "textColor": "#64748B",
-  "topRow": 12,
+  "topRow": 9,
   "truncateButtonColor": "#64748B",
   "type": "TEXT_WIDGET",
   "version": 1,

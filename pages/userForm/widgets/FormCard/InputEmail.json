@@ -3,7 +3,7 @@
   "animateLoading": true,
   "autoFocus": true,
   "borderRadius": "0.875rem",
-  "bottomRow": 34,
+  "bottomRow": 28,
   "boxShadow": "none",
   "defaultText": "",
   "dynamicBindingPathList": [
@@ -46,7 +46,7 @@
   "responsiveBehavior": "fill",
   "rightColumn": 60,
   "showStepArrows": false,
-  "topRow": 25,
+  "topRow": 19,
   "type": "INPUT_WIDGET_V2",
   "validation": "{{(() => { const email = InputEmail.text.trim(); const atIndex = email.lastIndexOf(\"@\"); const dotIndex = email.lastIndexOf(\".\"); return email.length > 5 && atIndex > 0 && dotIndex > atIndex + 1 && dotIndex < email.length - 1 && !email.includes(\" \"); })()}}",
   "version": 2,
