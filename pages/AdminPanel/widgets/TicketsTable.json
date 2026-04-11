@@ -684,7 +684,7 @@
   "rightColumn": 64,
   "searchKey": "",
   "showInlineEditingOptionDropdown": true,
-  "tableData": "{{\nApi1.data.filter(item =>\n  !SearchTickets.text ||\n  item.Name?.toLowerCase().includes(SearchTickets.text.toLowerCase()) ||\n  item.Email?.toLowerCase().includes(SearchTickets.text.toLowerCase()) ||\n  item.Subject?.toLowerCase().includes(SearchTickets.text.toLowerCase())\n)\n}}",
+  "tableData": "{{ JSObject1.filteredTickets() }}",
   "textSize": "0.875rem",
   "topRow": 37,
   "totalRecordsCount": 0,

@@ -1,57 +1,64 @@
 {
   "accentColor": "{{appsmith.theme.colors.primaryColor}}",
   "animateLoading": true,
-  "autoFocus": false,
   "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
   "bottomRow": 33,
-  "boxShadow": "0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06)",
-  "defaultText": "",
+  "boxShadow": "none",
+  "defaultOptionValue": "GREEN",
   "dynamicBindingPathList": [
     {
       "key": "accentColor"
     },
     {
       "key": "borderRadius"
+    },
+    {
+      "key": "sourceData"
     }
   ],
   "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
   "dynamicTriggerPathList": [],
-  "iconAlign": "left",
-  "inputType": "TEXT",
   "isDisabled": false,
+  "isFilterable": true,
   "isLoading": false,
   "isRequired": false,
   "isVisible": true,
-  "key": "kt5s9f1nq2",
-  "label": "Search by email",
+  "key": "zr7m27f9ay",
   "labelAlignment": "left",
   "labelPosition": "Top",
-  "labelStyle": "",
-  "labelTextColor": "#18181b",
+  "labelText": "Category",
   "labelTextSize": "0.875rem",
   "labelWidth": 5,
-  "leftColumn": 0,
+  "leftColumn": 33,
   "maxDynamicHeight": 9000,
   "minDynamicHeight": 4,
   "minWidth": 450,
   "mobileBottomRow": 33,
-  "mobileLeftColumn": 0,
-  "mobileRightColumn": 44,
+  "mobileLeftColumn": 35,
+  "mobileRightColumn": 55,
   "mobileTopRow": 26,
   "needsErrorInfo": false,
+  "optionLabel": "label",
+  "optionValue": "value",
   "originalBottomRow": 33,
   "originalTopRow": 26,
   "parentColumnSpace": 22.125,
   "parentId": "0",
   "parentRowSpace": 10,
+  "placeholderText": "Select option",
   "renderMode": "CANVAS",
-  "resetOnSubmit": false,
   "responsiveBehavior": "fill",
-  "rightColumn": 17,
-  "showStepArrows": false,
+  "rightColumn": 43,
+  "serverSideFiltering": false,
+  "sourceData": "{{\n[\n  { label: \"All\", value: \"\" },\n  { label: \"Tech\", value: \"Tech\" },\n  { label: \"Account\", value: \"Account\" },\n  { label: \"Other\", value: \"Other\" }\n]\n}}",
   "topRow": 26,
-  "type": "INPUT_WIDGET_V2",
-  "version": 2,
-  "widgetId": "m9s4rch0pt",
-  "widgetName": "SearchTickets"
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "57b5cp65tm",
+  "widgetName": "FilterCategory"
 }
